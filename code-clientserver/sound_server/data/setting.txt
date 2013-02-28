@@ -1,0 +1,16 @@
+#---以下參數需手動設定, 設定完後程式會記住---
+
+#frame rate (best to have the same rate in both client and server)
+frameRate: 30
+
+#本server在螢幕上的位置
+MonitorLocation: 0 0
+
+#本server的視窗大小
+ScreenSize: 300 150
+
+#本server的osc port
+oscPort: 13000
+
+
+#---以上參數需手動設定, 設定完後程式會記住---

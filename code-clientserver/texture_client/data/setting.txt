@@ -1,0 +1,53 @@
+#---以下參數需手動設定, 設定完後程式會記住---
+
+#client ID從 0 開始算
+clientID: 0
+
+#frame rate (best to have the same rate in both client and server)
+frameRate: 30
+
+#get random seed from server's file (file path can not have blank!)
+randomSeedFilePath: /Users/action/Documents/Processing/texture_server2/data/randomseed.txt
+
+#本client在螢幕上的位置
+MonitorLocation: 0 0
+
+
+
+#master canvas of overall
+MasterSize: 1600 1200
+
+#local screen of client
+ScreenLocation: 0 0
+ScreenSize: 800 600
+
+# 本client的osc port
+oscPort: 12001
+
+# sever的IP及osc port
+remoteIP: 127.0.0.1
+remoteOscPort: 12000
+
+#---以上參數需手動設定, 設定完後程式會記住---
+
+
+# 若改變(ScreenSize或ScreenLocation)數值，請刪除下方所有的line Info的資訊，讓程式自動儲存新的設定
+
+Vline: 158.0 0.0 1200.0 1.0 28.0 26.0
+Vline: 74.0 0.0 1200.0 1.0 74.0 29.0
+Vline: 103.0 0.0 1200.0 1.0 30.0 28.0
+Vline: 131.0 0.0 1200.0 1.0 29.0 27.0
+Vline: 184.0 0.0 1200.0 1.0 27.0 27.0
+Vline: 211.0 0.0 1200.0 1.0 28.0 28.0
+Vline: 239.0 0.0 1200.0 1.0 29.0 25.0
+Vline: 264.0 0.0 1200.0 1.0 26.0 25.0
+Vline: 289.0 0.0 1200.0 1.0 26.0 88.0
+Vline: 378.0 0.0 1200.0 1.0 90.0 24.0
+Vline: 402.0 0.0 1200.0 1.0 25.0 0.0
+Hline: 0.0 1111.0 1600.0 1.0 89.0 29.0
+Hline: 0.0 1083.0 1600.0 1.0 28.0 29.0
+Hline: 0.0 1055.0 1600.0 1.0 28.0 30.0
+Hline: 0.0 1026.0 1600.0 1.0 29.0 63.0
+Hline: 0.0 964.0 1600.0 1.0 62.0 31.0
+Hline: 0.0 934.0 1600.0 1.0 30.0 31.0
+Hline: 0.0 904.0 1600.0 1.0 30.0 0.0

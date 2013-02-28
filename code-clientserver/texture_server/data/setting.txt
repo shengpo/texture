@@ -1,0 +1,25 @@
+#---以下參數需手動設定, 設定完後程式會記住---
+
+#frame rate (best to have the same rate in both client and server)
+frameRate: 30
+
+#本server在螢幕上的位置
+MonitorLocation: 0 0
+
+#本server的視窗大小
+ScreenSize: 300 150
+
+#本server的osc port
+oscPort: 12000
+
+
+#每個client資訊如下 (用一個SPACE隔開)
+#ClientInfo: client執行檔位置 client_ID client_IP client_oscport
+#PS: 目前執行檔位置的參數，只能用在windows系統 and MAC系統; 若在Linux系統下，請直接填上"null" 即可
+
+ClientInfo: /Users/action/Desktop/texture_client_0/texture_client_0.app 0 127.0.0.1 12001
+ClientInfo: /Users/action/Desktop/texture_client_1/texture_client_1.app 1 127.0.0.1 12002
+ClientInfo: /Users/action/Desktop/texture_client_2/texture_client_2.app 2 127.0.0.1 12003
+
+
+#---以上參數需手動設定, 設定完後程式會記住---
