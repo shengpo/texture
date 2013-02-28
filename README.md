@@ -4,9 +4,12 @@ texture
 a slow, elegant and organic art work talking about the relationship of the natural and the digital domain.  
 ([video 1](http://www.youtube.com/watch?v=GTB5BmkbWRs)) ([video 2](http://www.youtube.com/watch?v=rP8ab175oxg))
 
+![texture_onFloor_5](https://github.com/shengpo/texture/raw/master/photo/texture_onFloor_5.jpg)
+![texture_onWall_1](https://github.com/shengpo/texture/raw/master/photo/texture_onWall_1.jpg)
 
 
 ----------------------------------------
+
 
 ####Basic Info:
 Title:	texture <br/>
