@@ -1,4 +1,4 @@
-;texture_client-server
+texture_client-server
 =====================
 
 這是texture client-server版本，可應用於多螢幕呈現 (多螢幕排列方式彈性，符合client端畫面擷取規則即可)  
