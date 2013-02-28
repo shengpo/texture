@@ -3,8 +3,9 @@ texture
 
 a slow, elegant and organic art work talking about the relationship of the natural and the digital domain.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/GTB5BmkbWRs" frameborder="0" allowfullscreen></iframe>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/rP8ab175oxg" frameborder="0" allowfullscreen></iframe>
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/GTB5BmkbWRs?hl=zh_TW&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/GTB5BmkbWRs?hl=zh_TW&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/rP8ab175oxg?version=3&amp;hl=zh_TW"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/rP8ab175oxg?version=3&amp;hl=zh_TW" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 ----------------------------------------
 
