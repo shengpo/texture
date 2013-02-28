@@ -3,6 +3,9 @@ texture
 
 a slow, elegant and organic art work talking about the relationship of the natural and the digital domain.
 
+<iframe width="560" height="315" src="http://www.youtube.com/embed/GTB5BmkbWRs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/rP8ab175oxg" frameborder="0" allowfullscreen></iframe>
+
 ----------------------------------------
 
 ####Basic Info:
