@@ -6,8 +6,10 @@ a slow, elegant and organic art work talking about the relationship of the natur
 
 <img src="https://github.com/shengpo/texture/raw/master/photo/texture_onFloor_5.jpg" width="256" height="192" />
 <img src="https://github.com/shengpo/texture/raw/master/photo/texture_onFloor_8.jpg" width="256" height="192" />
+<img src="https://github.com/shengpo/texture/raw/master/photo/texture_onFloor_3.jpg" width="256" height="192" />
 <img src="https://github.com/shengpo/texture/raw/master/photo/texture_onWall_0.jpg" width="256" height="192" />
 <img src="https://github.com/shengpo/texture/raw/master/photo/texture_onWall_1.jpg" width="256" height="192" />
+<img src="https://github.com/shengpo/texture/raw/master/photo/texture_onWall_3.jpg" width="256" height="192" />
 
 ----------------------------------------
 
