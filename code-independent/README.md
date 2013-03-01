@@ -48,4 +48,6 @@ Processing 2.0b8
 --------------------
 
 ##TODO
-- check code and upgrade code
+- [x] check code and upgrade code
+- [ ] add sound
+
