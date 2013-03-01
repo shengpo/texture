@@ -86,9 +86,6 @@ void draw() {
         //show
         director.GO();
         director.nextGO();
-
-        //do garbage collection
-        gc.runGC();
 }
 
 
@@ -109,7 +106,7 @@ void keyPressed(){
         }
         
         if(key == 'c'){
-                director.selectAnimationMode(-1);
+                director.selectAnimationMode(-1);        //-1 means to select random animation mode
         }
         
         if(int(key)>=48 && int(key)<=57){        //按數字0~9
@@ -248,25 +245,25 @@ void keyPressed(){
                         if(curline != null){
 
                                 PVector v = curline.getStartVertex();
-                                curline.setStartVertex(PVector.add(v, up));
+                                curline.setLineFromStart(PVector.add(v, up));
                         }
                 }
                 if(keyCode == DOWN){
                         if(curline != null){
                                 PVector v = curline.getStartVertex();
-                                curline.setStartVertex(PVector.add(v, down));
+                                curline.setLineFromStart(PVector.add(v, down));
                         }
                 }
                 if(keyCode == LEFT){
                         if(curline != null){
                                 PVector v = curline.getStartVertex();
-                                curline.setStartVertex(PVector.add(v, left));
+                                curline.setLineFromStart(PVector.add(v, left));
                         }
                 }
                 if(keyCode == RIGHT){
                         if(curline != null){
                                 PVector v = curline.getStartVertex();
-                                curline.setStartVertex(PVector.add(v, right));
+                                curline.setLineFromStart(PVector.add(v, right));
                         }
                 }
         }

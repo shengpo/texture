@@ -24,14 +24,15 @@ public class XLine {
 
 
         public XLine(PVector startVertex, float length, float weight, float left_distance, float right_distance, int lineMode) {
-                this.v1 = startVertex;
+//                this.v1 = startVertex;
                 this.length = length;
                 this.weight = weight;
                 this.left_distance = left_distance;
                 this.right_distance = right_distance;
                 this.lineMode = lineMode;
 
-                setLine("v1");
+                setLineFromStart(startVertex);
+//                setLine("v1");        //以v1作為pivot點來設定XLine
                 
                 spriteList = new ArrayList<LineSprite>();
         }
@@ -186,27 +187,25 @@ public class XLine {
         }
 
 
-        public void setStartVertex(PVector v) {
+        public void setLineFromStart(PVector v) {
                 v1 = v;
                 setLine("v1");
         }
-        public PVector getStartVertex() {
-                return v1;
-        }
-
-
-        public void setEndVertex(PVector v) {
+        public void setLineFromEnd(PVector v) {
                 v2 = v;
                 setLine("v2");
         }
-        public PVector getEndVertex() {
-                return v2;
+        public void setLineFromMiddle(PVector v) {
+                m = v;
+                setLine("m");
         }
 
 
-        public void setMiddleVertex(PVector v) {
-                m = v;
-                setLine("m");
+        public PVector getStartVertex() {
+                return v1;
+        }
+        public PVector getEndVertex() {
+                return v2;
         }
         public PVector getMiddleVertex() {
                 return m;

@@ -43,7 +43,7 @@ public class Director {
                 println("[H Line] turn on animation : " + hlineList.size());
                 
                 //select one mode at first
-                selectAnimationMode(-1);
+                selectAnimationMode(-1);        //-1 means to select random animation mode
         }
         
         

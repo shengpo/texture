@@ -46,6 +46,7 @@ public class SettingManager {
                                 }
                         }else {
                                 //error occured or file is empty
+                                println("[Setting File] " + settingFilePath + "  is loaded !!");
                                 break;
                         }
                 }
