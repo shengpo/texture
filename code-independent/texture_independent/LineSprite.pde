@@ -20,6 +20,10 @@ public class LineSprite {
         private PVector tm = null;
         private float tlength = 0;
         private float olength = 0;
+        
+        //to let red color can stay longer
+        private int counter = 0;
+        private int counterFinal = 5;
 
 
         public LineSprite(PVector v1, PVector v2, PVector m, float length, float weight, float left_distance, float right_distance, int mode) {
@@ -84,6 +88,8 @@ public class LineSprite {
 
 
         public void update() {
+                resetOriginalSpriteColor();        //恢復成原先在initMode()中設定的顏色
+                
                 switch(mode){
                         case 0:        //靜止不動
                                         //do nothing
@@ -92,8 +98,10 @@ public class LineSprite {
                                         alphavalue = alphavalue + (talphavalue-alphavalue)/step;
                                         if(talphavalue==255 && abs(talphavalue-alphavalue)<1){
                                                 talphavalue = 0;
+                                                playSound();
                                         }else  if(talphavalue==0 && abs(talphavalue-alphavalue)<1){
                                                 talphavalue = 255;
+                                                playSound();
                                         }
                                         break;
                         case 2:        //垂直線: 左右伸縮長條形
@@ -102,21 +110,25 @@ public class LineSprite {
                                                 distance = distance + (left_distance-distance)/step;
                                                 if(abs(distance-left_distance)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else if(stretchMode == 1){
                                                 distance = distance + (0-distance)/step;
                                                 if(abs(distance-0)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else if(stretchMode == 2){
                                                 distance = distance + (right_distance-distance)/step;
                                                 if(abs(distance-right_distance)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else{
                                                 distance = distance + (0-distance)/step;
                                                 if(abs(distance-0)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }
                                         break;
@@ -126,21 +138,25 @@ public class LineSprite {
                                                 distance = distance + (left_distance-distance)/step;
                                                 if(abs(distance-left_distance)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else if(stretchMode == 1){
                                                 distance = distance + (0-distance)/step;
                                                 if(abs(distance-0)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else if(stretchMode == 2){
                                                 distance = distance + (right_distance-distance)/step;
                                                 if(abs(distance-right_distance)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }else{
                                                 distance = distance + (0-distance)/step;
                                                 if(abs(distance-0)<0.1){
                                                         stretchMode = (stretchMode+1)%4;
+                                                        playSound();
                                                 }
                                         }
                                         break;
@@ -150,9 +166,11 @@ public class LineSprite {
                                         
                                         if(PVector.dist(m, tm) < 0.1){
                                                 tm = new PVector(m.x, random(v1.y, v2.y));
+                                                playSound();
                                         }
                                         if(abs(length-tlength) < 0.1){
                                                 tlength = random(olength*0.1, olength*0.3);
+                                                playSound();
                                         }
                         case 7:        //橫線: n個左右移動的線段
                                         m = PVector.add(m, PVector.div(PVector.sub(tm, m), step));
@@ -160,9 +178,11 @@ public class LineSprite {
                                         
                                         if(PVector.dist(m, tm) < 0.1){
                                                 tm = new PVector(random(v1.x, v2.x), m.y);
+                                                playSound();
                                         }
                                         if(abs(length-tlength) < 0.1){
                                                 tlength = random(olength*0.1, olength*0.3);
+                                                playSound();
                                         }
                                         break;
                 }
@@ -231,5 +251,21 @@ public class LineSprite {
                                         break;
                 }
         }
+        
+        
+        private void playSound(){
+                counter = 0;
+                spriteColor = color(255, 0, 0);
+                soundMaker.playSound();
+        }
+
+
+        //恢復成原先在initMode()中設定的顏色 
+        private void resetOriginalSpriteColor(){
+                counter = counter + 1;
+                if(counter > counterFinal){
+                        spriteColor = color(0);       
+                }
+       }
 }
 

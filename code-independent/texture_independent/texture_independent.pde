@@ -12,6 +12,7 @@
  CC BY-SA 3.0 
  ***********************/
 
+import arb.soundcipher.*;
 
 
 //for system
@@ -38,12 +39,16 @@ XLine curline = null;
 //for director
 Director director = null;
 
-//for setting
+//for setting mode
 PVector down = new PVector(0, 1);
 PVector up = new PVector(0, -1);
 PVector left = new PVector(-1, 0);
 PVector right = new PVector(1, 0);
 boolean isSettingMode = false;
+
+//for sound
+SoundMaker soundMaker = null;
+
 
 
 
@@ -66,6 +71,9 @@ void setup() {
         //director
         director = new Director();
         director.turnOnAllLineAnimationMode();        //at first, turn on the anomation!
+
+        //for sound
+        soundMaker = new SoundMaker(this);
 
         //for garbage collector
         gc = new GarbageCollector(gcPeriodMinute);
