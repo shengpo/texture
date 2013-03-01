@@ -42,6 +42,10 @@ texture_independent
 - 按小寫d	:	刪除正在編輯的線
 
 
+###使用的library
+- [SoundCipher library](http://explodingart.com/soundcipher) (version: Beta release 10)
+
+
 ###開發環境：
 Processing 2.0b8
 
@@ -49,5 +53,5 @@ Processing 2.0b8
 
 ##TODO
 - [x] check code and upgrade code
-- [ ] add sound
+- [x] add sound
 
