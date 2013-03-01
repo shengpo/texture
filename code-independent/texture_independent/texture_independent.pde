@@ -1,37 +1,18 @@
-/**************************
- 開發環境：Processing 2.0b3
+/***********************
+ [about texture project]
+ https://github.com/shengpo/texture
  
- 
- 執行說明：
--  此為獨立執行版本!
- - 開啟程式後，會自動進入動畫模式
- - 進入設定模式時
-        . 被選擇的線為藍色, 沒被選到的為黑線
-        . 紅點為線的pivot點 (作為參考點)
-        . 橫線的參考點(pivot點)預設為最左邊的點 (向右畫線)
-        . 直線的參考點(pivot點)預設為最上面的點 (向下畫線)
- - 設定完後，按小寫a，從新啟動動畫       
- - 目前共有 8種 animation模式, 按0~7數字鍵可以直接跳至該模式
- 
- 
- 設定說明：
- - 按小寫a                將所有的line都啟動animation mode
- - 按小寫c                更換animation 
- 
- - 按s或S                  開/關設定模式
- - 按小寫v                在螢幕中央產生垂直線 (高度等同畫面高度)
- - 按小寫h                在螢幕中央產生橫線 (長度等同畫面寬度)
- - 按大寫V                依序選擇要設定的垂直線
- - 按大寫H                依序選擇要設定的橫線
- - 按上下左右鍵        移動目前正在設定的線(直線或橫線)
-                                . 目前皆以最左邊的點or做上面的點作為起始點
- - 按 { 或 }                減少or增加目前所選定的線距離下面or左邊的線的距離 
- - 按 [ 或 ]                減少or增加目前所選定的線距離上面or右邊的線的距離 
- - 按小寫w               減少線的粗細(weight)
- - 按大寫W               增加線的粗細(weight)
- - 按小寫d                刪除正在編輯的線
+ [about texture-independent code]
+ https://github.com/shengpo/texture/tree/master/code-independent
 
- **************************/
+ [Author]
+ Shen, Sheng-Po (http://shengpo.github.com)
+ 
+ [License]
+ CC BY-SA 3.0 
+ ***********************/
+
+
 
 //for system
 int screen_width = 1024;
@@ -40,7 +21,8 @@ int screen_x = 0;
 int screen_y = 0;
 
 //for garbage collector
-GarbageCollector gc;
+GarbageCollector gc = null;
+float gcPeriodMinute = 5;    //設定幾分鐘做一次gc
 
 //for setting manager
 SettingManager settingManager = null;
@@ -78,15 +60,16 @@ void setup() {
         settingManager = new SettingManager();
         settingManager.load();
 
-        size(screen_width, screen_height, OPENGL);
+        size(screen_width, screen_height, P3D);
         background(255);
         
         //director
         director = new Director();
         director.turnOnAllLineAnimationMode();        //at first, turn on the anomation!
 
-        //for gc
-        gc = new GarbageCollector(1000);
+        //for garbage collector
+        gc = new GarbageCollector(gcPeriodMinute);
+        gc.start();
 
         //set frame location to emulate full screen
         frame.setLocation(screen_x, screen_y);
